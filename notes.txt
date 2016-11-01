@@ -1,0 +1,25 @@
+{
+    label: 'Export',
+    submenu: [{
+        label: 'Export to scss...',
+        accelerator: 'CmdOrCtrl+Shift+X',
+        click: 'exportToScss',
+        shouldEnable: function() {
+            return me.getViewModel().get('image');
+        }
+    }]
+}, 
+
+/**
+    * Exports the list of colors to a scss file
+    */
+exportToScss: function() {
+    var scss = this.getStore('colors').generateScss();
+
+    Ext.electron.Dialog.filePicker({
+        type: 'save'
+    }).then(function(file) {
+        fs.writeFileSync(file, scss, 'utf8');
+        Ext.toast('Exported sass to ' + file);
+    });
+}

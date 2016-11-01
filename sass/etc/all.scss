@@ -1,0 +1,33 @@
+/*
+ * This is is imported by virtue of "sass.etc" in "app.json".
+ */
+.color-item {
+    display: inline-block;
+    cursor: pointer;
+    margin-top: 10px;
+
+
+    &.x-view-item-focused {
+        outline: none !important;
+    }
+}
+
+.color-swatch {
+    height: 70px;
+    width: 70px;
+    border: 5px solid white;
+    margin-right: 10px;
+    transition: border-width 0.1s;
+    transition-timing-function: linear;
+
+    &:hover {
+        border-width: 0;
+    }
+}
+
+.color-label {
+    margin-left: 5px;
+    margin-top: 3px;
+    font-weight: normal;
+    font-size: 15px;
+}

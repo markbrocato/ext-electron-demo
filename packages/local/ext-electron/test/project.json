@@ -1,0 +1,19 @@
+{
+    "framework": "jasmine",
+    "libs": [],
+    "coverageFilters": [],
+    "scenarios": [
+        {
+            "libs": [
+                {
+                    "disabled": false,
+                    "path": "/packages/local/ext-electron/src/menu/Manager.js"
+                }
+            ],
+            "coverageFilters": [],
+            "directory": "unit",
+            "name": "Unit Tests"
+        }
+    ],
+    "launchAppWatch": true
+}
